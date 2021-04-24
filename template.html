@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Dashboard</title>
+      <style>
+         #loader {
+         transition: all 0.3s ease-in-out;
+         opacity: 1;
+         visibility: visible;
+         position: fixed;
+         height: 100vh;
+         width: 100%;
+         background: #fff;
+         z-index: 90000;
+         }
+         #loader.fadeOut {
+         opacity: 0;
+         visibility: hidden;
+         }
+         .spinner {
+         width: 40px;
+         height: 40px;
+         position: absolute;
+         top: calc(50% - 20px);
+         left: calc(50% - 20px);
+         background-color: #333;
+         border-radius: 100%;
+         -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+         animation: sk-scaleout 1.0s infinite ease-in-out;
+         }
+         @-webkit-keyframes sk-scaleout {
+         0% { -webkit-transform: scale(0) }
+         100% {
+         -webkit-transform: scale(1.0);
+         opacity: 0;
+         }
+         }
+         @keyframes sk-scaleout {
+         0% {
+         -webkit-transform: scale(0);
+         transform: scale(0);
+         } 100% {
+         -webkit-transform: scale(1.0);
+         transform: scale(1.0);
+         opacity: 0;
+         }
+         }
+      </style>
+   </head>
+   <body class="app">
+      <!-- @TOC -->
+      <!-- =================================================== -->
+      <!--
+         + @Page Loader
+         + @App Content
+             - #Left Sidebar
+                 > $Sidebar Header
+                 > $Sidebar Menu
+
+             - #Main
+                 > $Topbar
+                 > $App Screen Content
+         -->
+      <!-- @Page Loader -->
+      <!-- =================================================== -->
+      <div id='loader'>
+         <div class="spinner"></div>
+      </div>
+      <script>
+         window.addEventListener('load', function load() {
+           const loader = document.getElementById('loader');
+           setTimeout(function() {
+             loader.classList.add('fadeOut');
+           }, 300);
+         });
+      </script>
+      <main class='main-content bgc-grey-100'>
+         <div id='mainContent'>
+            <center><img src="logo.png"width="300" ></center>
+            <div class="row gap-20 masonry pos-r">
+               <div class="masonry-sizer col-md-6"></div>
+               <div class="masonry-item col-12">
+                  <!-- #Site Visits ==================== -->
+                  <div class="bd bgc-white">
+                     <div class="peers fxw-nw@lg+ ai-s">
+                        <div class="peer peer-greed w-70p@lg+ w-100@lg- p-20">
+                           <div class="layers">
+                              <div class="layer w-100 mB-10">
+                                 <h6 class="lh-1">Property Info - VAFX3412313</h6>
+                              </div>
+                              <div class="layer w-100">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="peer bdL p-20 w-30p@lg+ w-100p@lg-">
+                           <div class="layers">
+                              <div class="layer w-100">
+                                 <!-- Progress Bars -->
+                                 <div class="layers">
+                                    <div class="layer w-100">
+                                       <small class="fw-600 c-grey-700">List Price</small>
+                                       <h5 class="mB-5">$1,110,000</h5>
+                                       <hr>
+                                    </div>
+                                    <div class="layer w-100">
+                                       <small class="fw-600 c-grey-700">On Market For</small>
+                                       <h5 class="mB-5">5 Days</h5>
+                                       <hr>
+                                    </div>
+                                    <div class="layer w-100 ">
+                                       <small class="fw-600 c-grey-700">Location</small>
+                                       <h5 class="mB-5">Washington DC</h5>
+                                       <hr>
+                                    </div>
+                                    <div class="layer w-100">
+                                       <small class="fw-600 c-grey-700">Size</small>
+                                       <h5 class="mB-5">1300 Sq Ft</h5>
+                                       <hr>
+                                    </div>
+                                    <div class="layer w-100">
+                                       <small class="fw-600 c-grey-700">Rooms</small>
+                                       <h5 class="mB-5">2Br 2Ba</h5>
+                                       <hr>
+                                    </div>
+                                    <div class="layer w-100">
+                                       <small class="fw-600 c-grey-700">Year Built</small>
+                                       <h5 class="mB-5">1900</h5>
+                                       <hr>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="masonry-item  w-100">
+                  <div class="row gap-20">
+                     <!-- #Toatl Visits ==================== -->
+                     <div class='col-md-3'>
+                        <div class="layers bd bgc-white p-20">
+                           <div class="layer w-100 mB-10">
+                              <h6 class="lh-1">Down Payment</h6>
+                           </div>
+                           <div class="layer w-100">
+                              <div class="peers ai-sb fxw-nw">
+                                 <div class="peer peer-greed">
+                                    $227,000
+                                 </div>
+                                 <div class="peer">
+                                    <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-blue-50 c-blue-500">20% Down</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- #Total Page Views ==================== -->
+                     <div class='col-md-3'>
+                        <div class="layers bd bgc-white p-20">
+                           <div class="layer w-100 mB-10">
+                              <h6 class="lh-1">Loan Terms</h6>
+                           </div>
+                           <div class="layer w-100">
+                              <div class="peers ai-sb fxw-nw">
+                                 <div class="peer peer-greed">
+                                    30 Year Fixed
+                                 </div>
+                                 <div class="peer">
+                                    <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-blue-50 c-blue-500">3% APR</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- #Unique Visitors ==================== -->
+                     <div class='col-md-3'>
+                        <div class="layers bd bgc-white p-20">
+                           <div class="layer w-100 mB-10">
+                              <h6 class="lh-1">Closing Costs</h6>
+                           </div>
+                           <div class="layer w-100">
+                              <div class="peers ai-sb fxw-nw">
+                                 <div class="peer peer-greed">
+                                    User Defined
+                                 </div>
+                                 <div class="peer">
+                                    <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-blue-50 c-blue-500">3%</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class='col-md-3'>
+                        <div class="layers bd bgc-white p-20">
+                           <div class="layer w-100 mB-10">
+                              <h6 class="lh-1">Comp Data</h6>
+                           </div>
+                           <div class="layer w-100">
+                              <div class="peers ai-sb fxw-nw">
+                                 <div class="peer peer-greed">
+                                    Historic Comps
+                                 </div>
+                                 <div class="peer">
+                                    <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-purple-50 c-purple-500">12 Found</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="masonry-item col-md-6">
+                  <!-- #Monthly Stats ==================== -->
+                  <div class="bd bgc-white">
+                     <div class="layers">
+                        <div class="layer w-100 pX-20 pT-20">
+                           <h6 class="lh-1">Initial Investment</h6>
+                        </div>
+                        <div class="layer w-100 p-20">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td>Down Payment</td>
+                                    <td>$100.00</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Avg Vacancy Costs*</td>
+                                    <td>$100.00</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Closing Costs</td>
+                                    <td>$100.00</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <center>
+                              <div class="peer">
+                                 <span class="fsz-def fw-600 mR-10 c-grey-800">$100,000</span>
+                                 <small class="c-grey-500 fw-600">Total Cash on Hand</small>
+                              </div>
+                           </center>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="masonry-item col-md-6">
+                  <!-- #Monthly Stats ==================== -->
+                  <div class="bd bgc-white">
+                     <div class="layers">
+                        <div class="layer w-100 pX-20 pT-20">
+                           <h6 class="lh-1">Monthly Cash Flow</h6>
+                        </div>
+                        <div class="layer w-100 p-20">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td>Monthly HOA Fee</td>
+                                    <td>$100.00</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Monthly Mortgage Payment</td>
+                                    <td>$100.00</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Monthly Taxes</td>
+                                    <td>$100.00</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Monthly Revenue*</td>
+                                    <td>$100.00</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Monthly Profit</td>
+                                    <td>$100.00</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <center>
+                              <div class="peer">
+                                 <span class="fsz-def fw-600 mR-10 c-grey-800">10% </span>
+                                 <small class="c-grey-500 fw-600">Yearly Return on Initial Investment</small>
+                              </div>
+                           </center>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="masonry-item col-12">
+                 <div class="bd bgc-white">
+                    <div class="layers">
+                       <div class="layer w-100 pX-20 pT-20">
+                          <h6 class="lh-1">Comp Data</h6>
+                       </div>
+                       <div class="layer w-100 p-20">
+
+                         Fields marked with * are calculated based on comps in the same neighborhood with the following averages:<br>
+                         <table class="table table-bordered">
+                            <tbody>
+                               <tr>
+                                  <td>Subdivision</td>
+                                  <td>666</td>
+                               </tr>
+                               <tr>
+                                  <td>Average Size</td>
+                                  <td>666</td>
+                               </tr>
+                               <tr>
+                                  <td>Average Year Built</td>
+                                  <td>666</td>
+                               </tr>
+                               <tr>
+                                  <td>Avg Vacancy Rate</td>
+                                  <td>666</td>
+                               </tr>
+                            </tbody>
+                         </table>
+                       </div>
+                    </div>
+                 </div>
+               </div>
+
+            </div>
+         </div>
+
+      </main>
+      <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600">
+         <span>Copyright © 2021 Barkley Holdings LLC. All rights reserved.</span>
+      </footer>
+   </body>
+</html>
